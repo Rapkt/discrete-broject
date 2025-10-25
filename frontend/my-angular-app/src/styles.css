@@ -18,10 +18,33 @@ body{
     color: var(--primary-text-color);
 }
 header{
-    background-color: var(--accent-color);
-    padding: 0rem 1.25rem;
-
-    height: 3rem;
+  background-color: var(--accent-color);
+  padding: 0rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+}
+header::before{
+  content: "";
+  position: absolute;
+  top: -30px;
+  right:50px;
+  width: 3px;             /* length of ribbon */
+  height: 100px;             /* thickness of ribbon */
+  transform: rotate(45deg);  /* angle of ribbon */
+  background: var(--secondary-color);
+  z-index: 2;
+}
+header::after{
+  content: "";
+  position: absolute;
+  top: -20px;
+  right:40px;
+  width: 3px;             /* length of ribbon */
+  height: 100px;             /* thickness of ribbon */
+  transform: rotate(45deg);  /* angle of ribbon */
+  background: var(--secondary-color);
+  z-index: 2;
 }
 header nav div img{
     height: 3rem;
